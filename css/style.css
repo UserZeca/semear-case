@@ -1,0 +1,146 @@
+
+html {
+    height: 100%;
+ 
+}
+
+body {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+}
+
+input{
+
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+}
+
+small{
+    font-size: 14px;
+
+}
+
+#sub-text1{
+
+    font-size: 50px;
+
+}
+
+
+#sub-text2{
+        text-shadow: #7a7a7a;
+
+    color: #a7591a;
+}
+
+#sub-text3{
+
+    font-size: 27px;
+}
+
+#sub-text4{
+
+    font-size: 24px;
+}
+
+#sub-text5 {
+
+    font-size: 56px;
+    text-shadow: #7a7a7a;
+    color: #a7591a;
+
+}
+
+#sub-text6 {
+
+    color:#7a7a7a;
+    font-size: 36px;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+#sticky-footer {
+    flex-shrink: none;
+    background-color: #d1d1d1;
+    margin: 0;
+  
+}
+
+#footer{
+
+    margin-top:50px;
+
+
+}
+
+
+#container2{
+    margin-top: 60px;
+}
+
+#container3{
+    margin-top: 140px;
+    margin-bottom: 0px ;
+}
+
+
+.logo-tipo {
+    height: 115%;
+    margin-bottom: 80px;
+    margin-top: 30px;
+}
+
+.jumbotron{
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(241, 241, 241, 0.1)), url('img/capa-home3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+.dark-block{
+    background-color: rgba(0,0,0,0.5);
+    background-size: cover;
+    width: 100%;
+    margin: 0;
+}
+
+
+
+div.row{
+    margin: 0;
+    padding: 0;
+
+}
+
+.border {
+
+    border: 0.1rem solid #86933d !important;
+}
+
+.form{
+
+    margin-top: 30px;
+}
+
+.single-form-button{
+
+    margin-top: 10px;
+    color: white;
+    padding: 20px;
+    background-color: #86933d;
+    font-size: 18px;
+    white-space: normal !important;
+
+}
+
+.text-spacing{
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
