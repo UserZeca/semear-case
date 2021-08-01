@@ -6,8 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Nunito|Ubuntu&display=swap" rel="stylesheet">        
-        <title>Landing Page One</title>
+        <link href="https://fonts.googleapis.com/css?family=Nunito|Ubuntu&display=swap" rel="stylesheet">  
+        <link rel="icon" href="http://www.isemear.org.br/wp-content/uploads/2019/11/cropped-árvorenovo-32x32.png" sizes="32x32">      
+        <title>Semear - case</title>
 
     </head>
 
@@ -29,34 +30,60 @@
 
                             <h3 id="sub-text3" class="text-spacing">Faça parte de uma rede de conexão líderes comprometidos com os desafios sociais e que atuem como agentes multiplicadores para um Brasil melhor e mais justo</h3>                       
                         </div>
+
+                        <div class="arrow-down-information" >
+                            <div class="animation-arrow-down">↓</div>
+                        </div>
                     </div>
+                    
 
                     <div class="col-md-4 dark-block">
 
                         <div id="container3">
-                            <h2 id="sub-text4"><b>Alguma dúvida? fale agora com alguém de nossa equipe</b></h2>
+                            <h2 id="sub-text4"><b>Quer fazer parte desse time ? Preencha o formulário abaixo</b></h2>
                         
-                            <form class="form">
+                            <form class="form" method="POST">
                                 <div class="form-group">
                                     <small class="form-text text-muted" ><b>*Nome</b></small>                           
                                     <input type="text" class="form-control form-control-lg border" id="name" name="name" >
-
-                                    <small class="form-text text-muted" ><b>*Profissão</b></small>              
-                                    <input type="text" class="form-control form-control-lg border" id="prof" name="prof" >
                                     
-                                    <small class="form-text text-muted" ><b>Renda (em salários mínimos)</b></small>         
-                                                      
+                                    <div class="row">
+
+                                        <div class="col-md-6">
+
+                                            <small class="form-text text-muted" ><b>*Profissão</b></small>              
+                                            <input type="text" class="form-control form-control-lg border" id="prof" name="prof" >
+
+                                        </div>
+
+                                        
+                                        <div class="col-md-6">
+
+                                            <small class="form-text text-muted" ><b>*Empresa</b></small>              
+                                            <input type="text" class="form-control form-control-lg border" id="company" name="company" >
+                                            
+                                        </div>
+
+
+                                    </div>
+
+                                   
+
+                                    <small class="form-text text-muted" ><b>*Renda (em salários mínimos)</b></small>         
+
+
+
                                     <select id="renda" class="form-control form-control-lg border">
+                                        <option value="NaN" selected>selecione uma opção</option>
                                         <option value="1-2">1 a 2</option>
                                         <option value="2-5">2 a 5</option>
                                         <option value="5-8">5 a 10</option>
                                         <option value="8">10+ </option>
-                                        <option value="NaN" selected>selecione uma opção</option>
                                     </select>                                    
 
 
-                                    <small class="form-text text-muted" ><b>sdfdsfds</b></small>                           
-                                    <input type="text" class="form-control form-control-lg border" id="" name="prof" >
+                                    <small class="form-text text-muted" ><b>*cpf (apenas números)</b><span id="invalidCPF"></span></small>                           
+                                    <input type="text" class="form-control form-control-lg border" valid=false id="cpf" name="cpf" maxlength="11">
 
 
                                     
@@ -64,14 +91,44 @@
                                     <input type="text" class="form-control form-control-lg border" id="linkedIn" name="linkedIn" >
                                 
                                 
-                                    <small class="form-text text-muted" name="email"><b>Email*</b><span id="invalidEmail"></span></small>
+                                    <small class="form-text text-muted" name="email"><b>*Email</b><span id="invalidEmail"></span></small>
                                                                
-                                    <input type="text" class="form-control form-control-lg border" id="email" name="email">
+                                    <input type="text" class="form-control form-control-lg border" id="email" valid=false name="email">
                                   
-                                    <small class="form-text text-muted" ><b>Telefone</b></small>                           
-                                    <input type="text" class="form-control form-control-lg border"  id="telephone" name="telephone" maxlength="15">
+                                    <small class="form-text text-muted" ><b>*Telefone</b></small>                           
+                                    <input type="text" class="form-control form-control-lg border" valid=false id="telephone" name="telephone" maxlength="15">
                                     
-                                    <button class="btn  btn-block single-form-button" type="submit" id="submit" disabled>QUERO MAIS INFORMAÇÕES</button>
+                                    <button class="btn  btn-block single-form-button" data-toggle="modal" data-target="#exampleModalLong" type="submit" id="submit" disabled>ENVIAR</button>
+
+
+
+                                    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                          <div class="modal-content">
+                                            <div class="modal-header">
+                                              <h5 class="modal-title" id="exampleModalLongTitle">Segunda Etapa</h5>
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                              </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Parabéns! Você já deu o primeiro passo pra se tornar um mentor(a)/doador(a) do Semear. Agora que você já compartilhou suas informações básicas, nós queremos saber um pouquinho mais sobre você, e pra isso nós preparamos pequenas perguntas
+                                                pra você responder. Não se preoucupe levará no máximo uns 10 minutinhos, porém, se não puder responder agora, não se preoucupe, o formulário com as perguntas foi enviado para o email que você nos forneceu anteriormente.      
+
+                                                <br>
+                                                <br>
+                                                <br>
+                                                Obs.: O sistema é meramente demostrativo, muita partes são somente demostrativas (ex.: envio de email).
+                                            </div>
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn btn-secondary" data-dismiss="modal" >Responder Depois</button>
+                                              <button type="button" class="btn" id="response-now">Responder Agora</button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+
                                     
                                 </div>
 
@@ -79,9 +136,11 @@
                         </div>
                     </div>
 
+                   
+
                 </div>
 
-            
+             
             </div>
         </div>
                 <footer id="sticky-footer">
