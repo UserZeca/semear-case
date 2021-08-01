@@ -40,9 +40,9 @@
                     <div class="col-md-4 dark-block">
 
                         <div id="container3">
-                            <h2 id="sub-text4"><b>Quer ? fale agora com alguém de nossa equipe</b></h2>
+                            <h2 id="sub-text4"><b>Quer fazer parte desse time ? Preencha o formulário abaixo</b></h2>
                         
-                            <form class="form">
+                            <form class="form" method="POST">
                                 <div class="form-group">
                                     <small class="form-text text-muted" ><b>*Nome</b></small>                           
                                     <input type="text" class="form-control form-control-lg border" id="name" name="name" >
@@ -60,7 +60,7 @@
                                         <div class="col-md-6">
 
                                             <small class="form-text text-muted" ><b>*Empresa</b></small>              
-                                            <input type="text" class="form-control form-control-lg border" id="inter" name="inter" >
+                                            <input type="text" class="form-control form-control-lg border" id="company" name="company" >
                                             
                                         </div>
 
@@ -98,7 +98,37 @@
                                     <small class="form-text text-muted" ><b>*Telefone</b></small>                           
                                     <input type="text" class="form-control form-control-lg border" valid=false id="telephone" name="telephone" maxlength="15">
                                     
-                                    <button class="btn  btn-block single-form-button" type="submit" id="submit" disabled>ENVIAR</button>
+                                    <button class="btn  btn-block single-form-button" data-toggle="modal" data-target="#exampleModalLong" type="submit" id="submit" disabled>ENVIAR</button>
+
+
+
+                                    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                          <div class="modal-content">
+                                            <div class="modal-header">
+                                              <h5 class="modal-title" id="exampleModalLongTitle">Segunda Etapa</h5>
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                              </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Parabéns! Você já deu o primeiro passo pra se tornar um mentor(a)/doador(a) do Semear. Agora que você já compartilhou suas informações básicas, nós queremos saber um pouquinho mais sobre você, e pra isso nós preparamos pequenas perguntas
+                                                pra você responder. Não se preoucupe levará no máximo uns 10 minutinhos, porém, se não puder responder agora, não se preoucupe, o formulário com as perguntas foi enviado para o email que você nos forneceu anteriormente.      
+
+                                                <br>
+                                                <br>
+                                                <br>
+                                                Obs.: O sistema é meramente demostrativo, muita partes são somente demostrativas (ex.: envio de email).
+                                            </div>
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn btn-secondary" data-dismiss="modal" >Responder Depois</button>
+                                              <button type="button" class="btn" id="response-now">Responder Agora</button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+
                                     
                                 </div>
 

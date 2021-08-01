@@ -153,12 +153,7 @@ div.row{
     animation: go-back 1s infinite alternate;
 }
 
-.animation-arrow-down{
 
- 
-
-
-}
 
 @keyframes go-back {
     from {
@@ -167,4 +162,25 @@ div.row{
     to {
       transform: translateY(0);
     }
+  }
+
+
+
+  #exampleModalLong{
+
+    color: black ;
+
+  }
+
+  #exampleModalLong h5 {
+
+    color: #a7591a;
+
+  }
+
+  #response-now{
+
+    color: white;
+    background-color: #86933d ;
+    
   }

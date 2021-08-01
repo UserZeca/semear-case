@@ -127,12 +127,12 @@ function validation(){
 
     let length_name = document.getElementById('name').value.length;
     let length_prof = document.getElementById('prof').value.length;
-    let length_renda =  document.getElementById('renda').value;
-    
+    let renda =  document.getElementById('renda').value;
+    let length_company = document.getElementById('company').value.length;
 
     console.log(length_name);
     console.log(length_prof);
-    console.log(length_renda);
+    console.log(renda);
     console.log(cpf.valid); 
     console.log(telephone.valid);
     console.log(emailValid);
@@ -141,8 +141,8 @@ function validation(){
     if(
         length_name > 0 &&
         length_prof > 0 &&
-  
-        length_renda != "NaN" &&
+        length_company > 0 &&
+        renda != "NaN" &&
         cpf.valid == true && 
         emailValid == true && 
         telephone.valid == true
@@ -261,11 +261,12 @@ function loadingNewProperty(id){
 window.onload = function(){
     
 
-
+   
 
 
     loadingNewProperty('email');
 
+    
     
 
     document.getElementById('name').onkeypress = function(event){
@@ -291,6 +292,7 @@ window.onload = function(){
 
     document.getElementById('telephone').onkeyup = function(){     
         update( this, changeInput );
+        validation();
     }
 
     document.getElementById('telephone').onkeypress = function(event){ 
@@ -315,9 +317,28 @@ window.onload = function(){
         validation();
     }
 
+    document.getElementById('company').onkeyup = function(){
+        validation();
+    }
+
+
+    document.getElementById('submit').onclick = function(e){
+
+        e.preventDefault();
+     
+
+
+    }
 
     
+    console.log( document.getElementById('response-now'));
+    
+    document.getElementById('response-now').onclick = function(){
 
+        console.log('click');
+        window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfaVc5sEwkxgWcjZXMQW-FD1bMcruM2PpH0QGLBJL22q3ftDg/viewform";
+
+    }
 
 }
 //+-------------------------------------------------------------------------------------------------------------------+
