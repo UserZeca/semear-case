@@ -144,3 +144,27 @@ div.row{
     margin-bottom: 20px;
 
 }
+
+.arrow-down-information{
+    margin-left: 50% ;
+    transform: translateX(-50);
+    font-size: 54px;
+  
+    animation: go-back 1s infinite alternate;
+}
+
+.animation-arrow-down{
+
+ 
+
+
+}
+
+@keyframes go-back {
+    from {
+      transform: translateY(100px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
